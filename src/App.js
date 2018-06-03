@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter , Route } from "react-router-dom";
+
+const NewRoute = () => {
+  return(
+    <div>
+      <p>
+        NewRoute
+      </p>
+    </div>
+  )
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        
-      </div>
+       /*this BrowserRouter is a wrapper Component
+       that we can wrap all our route inside our application this BrowserRouter acts a wrapper div */
+
+      <BrowserRouter > 
+        <div>      
+          <Route path="/new" component={NewRoute} />>
+        </div>
+      </BrowserRouter>
     );
   }
 }
