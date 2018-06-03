@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter , Route } from "react-router-dom";
-
-const NewRoute = () => {
-  return(
-    <div>
-      <p>
-        NewRoute
-      </p>
-    </div>
-  )
-}
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 class App extends Component {
   render() {
@@ -19,7 +12,11 @@ class App extends Component {
 
       <BrowserRouter > 
         <div>      
-          <Route path="/new" component={NewRoute} />>
+        
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+
         </div>
       </BrowserRouter>
     );
